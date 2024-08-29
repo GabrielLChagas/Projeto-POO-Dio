@@ -22,10 +22,20 @@ public class Main {
         System.out.println(curso2);
 
         Mentorias mentoria1 = new Mentorias();
-        mentoria1.setTitulo("");
-        mentoria1.setDescricao("");
+        mentoria1.setTitulo("Mentoria de introdução");
+        mentoria1.setDescricao("Desenvolver o intendimento basíco");
         mentoria1.setDataMentoria(LocalDate.now());
 
         System.out.println(mentoria1);
+
+
+        Bootcamp camp1 = new Bootcamp();
+        camp1.setNome("");
+        camp1.setDescricao("");
+        camp1.getConteudos().add(curso1);
+        camp1.getConteudos().add(curso2);
+        camp1.getConteudos().add(mentoria1);
+
+        System.out.println(camp1);
     }
 }
