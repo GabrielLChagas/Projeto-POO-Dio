@@ -2,7 +2,8 @@ package desafio.projeto.poo.dio.dominio;
 
 public class Cursos extends Conteudos {
 
-    private static double xp;
+
+    private static double xp = 0d;
     private String titulo;
     private String descricao;
     private Integer cargaHoraria;
@@ -22,9 +23,12 @@ public class Cursos extends Conteudos {
 
     public void setCargaHoraria(Integer cargaHoraria) {
         this.cargaHoraria = cargaHoraria;}
-    public double calcularXp() {
-        return 0;
-    }
+
+    public static double getXp() {
+        return xp;}
+    public void setXp(double xp) {
+        Cursos.xp = xp;}
+
 
     @Override
     public String toString() {
@@ -37,6 +41,6 @@ public class Cursos extends Conteudos {
 
     @Override
     public double calcularXP() {
-        return 0;
+        return xp += xpBase;
     }
 }

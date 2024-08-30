@@ -59,4 +59,9 @@ public class Devs {
                 Objects.equals(conteudosConcluidos, devs.conteudosConcluidos);
 
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+    }
 }

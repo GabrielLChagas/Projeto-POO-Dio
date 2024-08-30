@@ -2,7 +2,7 @@ package desafio.projeto.poo.dio.dominio;
 
 public abstract class Conteudos {
 
-    private static final double xP = 10d;
+    static final double xpBase = 10d;
     private String titulo;
     private String descricao;
 

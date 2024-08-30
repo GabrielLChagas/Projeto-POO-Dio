@@ -11,6 +11,7 @@ public class Main {
         curso1.setTitulo("Inicialização Java");
         curso1.setDescricao("Introdução a linguagem Java");
         curso1.setCargaHoraria(5);
+        curso1.setXp(20d);
 
         System.out.println(curso1);
 
@@ -18,6 +19,7 @@ public class Main {
         curso2.setTitulo("Desenvolvimento SQL");
         curso2.setDescricao("Contrução de banco de dados usado SQL");
         curso2.setCargaHoraria(10);
+        curso2.setXp(50d);
 
         System.out.println(curso2);
 
@@ -37,5 +39,15 @@ public class Main {
         camp1.getConteudos().add(mentoria1);
 
         System.out.println(camp1);
+
+
+        Devs devTina = new Devs();
+        devTina.setNome("Tina");
+        devTina.inscreverBootcamp(camp1);
+        devTina.concluirCurso();
+        System.out.println("--");
+        System.out.println("Conteúdo inscritos Tina: " + devTina.getConteudosInscritos());
+        System.out.println("Conteúdo concluidos Tina: " + devTina.getConteudosConcluidos());
+        System.out.println("XP: " + devTina.culculorXpTotal());
     }
 }
